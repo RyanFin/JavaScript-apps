@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Week2 App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Checking.js"></script>
+        <script src="Grades.js"></script>
+    </head>
+    <body>
+        <script>
+            var x = 3;
+            var y = 1.1;
+            document.write(x + y);
+            document.write("<br/>" + x * y);
+            document.write("<br/>" + (x + y) * (x - y));
+            var z = 9;
+            document.write("<br/>" + Math.sqrt(z));
+            document.write("<br/>" + Math.abs(y / x));
+            document.write("<br/>" + "---- Other examples ----" + "<br/>");
+
+            var mid = 25;
+            var high = 50;
+            var low = 1;
+            var current = 13;
+            var found = -1;
+            if (current < mid) {
+                mid = (current - low) / 2;
+            } else if (current > mid) {
+                mid = (current + high) / 2;
+            } else {
+                found = current;
+            }
+            document.write("mid: " + mid);
+
+            document.write("<br/>" + "---- Other examples ----" + "<br/>");
+            var num = 0;
+            var sum = 0;
+
+            for (var i = 0; i < 10; i++) {
+                num++;
+                sum = sum + num;
+                document.write(num + "<br/>");
+            }
+
+            document.write("total: " + sum + "<br/>");
+
+            document.write("<br/>" + "---- Functions ----" + "<br/>");
+
+            //variable product has a scope of the function only
+            function factorial(number) {
+                var product = 1;
+                for (var i = number; i >= 1; i--) {
+                    product *= i;
+                }
+
+                return product;
+            }
+
+            document.write(factorial(4) + "<br/>");
+            document.write(factorial(5) + "<br/>");
+            document.write(factorial(10) + "<br/>");
+
+            function curve(arr, amount) {
+                for (var i = 0; i < arr.length; i++) {
+                    arr[i] += amount;
+                }
+            }
+
+            var grades = [77, 73, 74, 81, 90];
+            //add 5 to every element within the array
+            curve(grades, 5);
+            document.write(grades);
+
+            var scope = "global";
+            function showScope() {
+                return "<br/>" + scope;
+            }
+            document.write("<br/>" + scope);
+            document.write(showScope());
+
+            document.write("<br/>" + "----Using Objects ----" + "<br/>");
+
+            var account = new Checking(59);
+            document.write("Initial balance: " + account + "<br/>"); //automatically runs the toString() method
+            //add funds
+            account.deposit(900); //add £900
+            document.write("Added £900: " + account + "<br/>");
+            //withdraw cash
+            account.withdraw(359); //withdraw £359
+            document.write(account);
+
+            document.write("<br/>" + "----Arrays----");
+
+            var numbers = [1, 2, 3, 4, 5];
+            document.write("<br/>" + numbers.length);
+            //heterogeneous arrays accepted
+            var heteroArr = [2.1, 3, "Ryan", true, null];
+            document.write("<br/>" + heteroArr.length + "<br/>");
+
+            var names = ["David", "Cynthia", "Raymond", "Clayton", "Jennifer"];
+
+            var name = "Raymond"
+            var position = names.indexOf(name);
+            if (position >= 0) {
+                document.write("Found " + name + " at position " + position);
+            } else {
+                document.write(name + " not found in array.");
+            }
+            
+            document.write("<br/>" + "----|Grades|----");
+            
+            var ryan = [];
+            var sum;
+            
+            
+            
+            function addGrade(num){
+                ryan.push(num);
+            }
+            
+            addGrade(10);
+            addGrade(5); //[50,50]
+            
+            for(var i = 0; i < ryan.length; i++){
+                sum = sum + ryan[i];
+            }
+            
+            
+            document.write(sum);
+            
+            var words = ["hello", "there"];
+            
+            for(var i = 0; i < words.length; i++){
+                document.write(words[i] + " ");
+            }
+            for(var i = words.length-1; i >= 0; --i){
+                document.write(words[i] + " ");
+            }
+
+        </script>
+    </body>
+</html>
