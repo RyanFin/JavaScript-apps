@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-Feb-2017, 20:19:07
+    Author     : user
+*/
+
+ #clock { /* Style apply to element with id="clock" */
+ font: bold 24pt sans; /* Use a big bold font */
+ background: #ddf; /* On a light bluish-gray background */
+ padding: 10px; /* Surround it with some space */
+ border: solid black 2px; /* And a solid black border */
+ border-radius: 10px; /* Round the corners (where supported) */
+ }
+
+
