@@ -16,7 +16,16 @@ and open the template in the editor.
         <script>
             document.write(document.URL + "<br/>");
             document.write("Window Location:" + window.location); //same as document.URL
+            //get element by Id
+            var timestamp = document.getElementById("timestamp");
+            //get element by type e.g. HTML paragraph
+            var p = document.getElementById("p");
+            //p.onclick(document.write("Hi I am a 'p' tag"));
+            
+            
         </script>
         <a href="eventExample.html" target="_blank">Click me</a>
+        <p id="timestamp">timestamp</p>
+        <p>Hi there!!!</p>
     </body>
 </html>
