@@ -1,7 +1,8 @@
 <link rel="import" href="course-view.html">
 <link rel="import" href="address-view.html">
-<dom-module id="student-view">
 
+<dom-module id="student-view">
+    
     <style is="custom-style">
         paper-button.custom {
             --paper-button-ink-color: var(--paper-pink-a200);
@@ -46,7 +47,7 @@
             font-type:bolder;
         }
     </style>
-
+    
     <template>
         <div class="vertical-section ">
             <div id = "firstname" >{{firstname}}</div> 
@@ -62,8 +63,7 @@
 
         </div>
     </template> 
-
-    <script>
+     <script>
         Polymer({
             is: "student-view",
             properties: {
@@ -85,5 +85,4 @@
             },
         });
     </script>  
-
 </dom-module>
