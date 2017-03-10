@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var isTemplateSupported = function () {
+                var template = document.createElement("template");
+                return 'content' in template;
+            };
+            var isSupported = isTemplateSupported(), message = document.getElementById("message");
+            if (isSupported) {
+                message.innerHTML = "Template element is supported by the browser.";
+            } else {
+                message.innerHTML = "Template element is not supported by the browser.";
+            }
+        </script>
+        <div>TODO write content</div>
+    </body>
+</html>

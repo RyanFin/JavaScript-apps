@@ -13,6 +13,9 @@ and open the template in the editor.
     </head>
     <body>
         <h1>RYan JavaScropt</h1>
+        <div id = "hello">Hello Div</div>
+        <p>Hi there!!!</p>
+        <p class="warning">Should be orange</p>
         <script>
             document.write(document.URL + "<br/>");
             document.write("Window Location:" + window.location); //same as document.URL
@@ -21,11 +24,15 @@ and open the template in the editor.
             //get element by type e.g. HTML paragraph
             var p = document.getElementById("p");
             //p.onclick(document.write("Hi I am a 'p' tag"));
+           
+            var hello = document.getElementById("hello");
             
-            
+            //div must be above 
+            hello.style.backgroundColor = "blue"; //change background color of the div 
+
         </script>
         <a href="eventExample.html" target="_blank">Click me</a>
         <p id="timestamp">timestamp</p>
-        <p>Hi there!!!</p>
+        <a href="componentTest.html">Click for component test</a>
     </body>
 </html>

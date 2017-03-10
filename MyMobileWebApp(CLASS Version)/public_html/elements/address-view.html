@@ -1,0 +1,40 @@
+
+<dom-module id="address-view">
+
+    <template>
+        <div class="vertical-section ">
+            <div class="horizontal-section">
+                <div> House Number</div>  <input id = "txtNumber"></input>
+                <div id="HouseNumberOutput" name="000"></div>
+            </div> 
+             <div class="horizontal layout">
+                <div> Street</div>  <input id = "txtStreet"></input>
+                <div id="streetOutput" name="null"></div>
+                
+            </div>             
+            
+        </div>
+    </template> 
+
+    <script>
+        Polymer({
+            is: "address-view",
+            properties: {
+                houseNumber: {
+                    type: String,
+                    value: ""
+                },
+                street: {
+                    type: String,
+                    value: ""
+                },
+            },
+            onClickAction: function(x){
+                var str1 = this.$.txtStreet.value;
+                this.$.streetOutput.name = str1;
+            },
+        });
+    </script>  
+
+
+</dom-module>

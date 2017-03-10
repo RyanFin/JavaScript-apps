@@ -11,4 +11,4 @@ function displayTime() {
     elt.innerHTML = now.toLocaleTimeString(); // make elt display it
     setTimeout(displayTime, 1000); //run again in 1 second
 }
-window.onload = displayTime(); //start displaying the time when document loads
+//window.onload = displayTime(); //start displaying the time when document loads

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initialscale=1, user-scalable=yes">
+        <title>University Course</title>
+        <!-- import web-components libraries -->
+        <script src="components/webcomponentsjs/webcomponents-lite.js"></script>
+        <link rel="import" href="components/iron-input/iron-input.html">
+        <link rel="import" href="components/paper-styles/color.html">
+        <link rel="import" href="components/paper-styles/demo-pages.html">
+        <link rel="import" href="components/paper-styles/typography.html">  
+        <link rel="import" href="components/paper-button/paper-button.html">
+        <link rel="import" href="components/polymer/polymer.html">
+        
+        <link rel="import" href="elements/hello-world.html"
+        <link rel="import" href="elements/student-view.html">
+        <link rel="import" href="elements/address-view.html">
+
+    </head>
+    
+    
+    <body>
+        <div class="vertical-section vertical-section-container centered">
+            <template is="dom-bind">
+                <hello-world></hello-world>
+                <div>Student 1:</div>
+                <student-view firstname="John" middlename= "Harry" lastname="Abbot" ></student-view>
+                <div>MAIN Address</div> 
+                <address-view housenumber="102" street="Westminster Palace"></address-view>
+                <span>Student 2:</span>
+                <student-view firstname="Holly" middlename="Wooler" lastname="Smith"></student-view>
+            
+            </template>
+        </div>
+    </body>
+    
+</html>

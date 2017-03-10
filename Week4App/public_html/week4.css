@@ -8,11 +8,12 @@ and open the template in the editor.
     Author     : Ryan
 */
 
-p.ryanTest{
+p{
+    background-color: orange;
+}
+
+.warning{
     color: red;
 }
 
-#timestamp{
-    background-color: yellow;
-}
 

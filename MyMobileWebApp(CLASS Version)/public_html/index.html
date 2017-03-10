@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Mobile Web App Development</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <script src="Person.js"></script>
+    <script src="ListADT.js"></script>
+    
+    <style>
+        .warning{
+            color:red;
+        }    
+        
+        #nav{
+            color:red;
+        }
+        div{
+            font-size: 16px;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <div id = "helloDiv" >Hello Mobile Universe!!!</div>
+        <div id="timestamp"> TimeStamp </div>
+        <div id="nav"> Nav div. </div>   
+        <div class="warning">This is warning div.</div>  
+        <a href ="university-course-page.html">University Registration</a>
+        <a href="javascript:void window.open('about:blank');">Open Window</a>
+     
+        <script type="text/javascript">
+            // var aPerson = new Person("John","Quincy","Public");
+            // document.write("Hello World to Person = "+ aPerson.initials());
+            
+            // test ListADT:
+            var names = new List();
+            names.append("Cynthia");
+            names.append("Raymond");
+            names.append("Barbara");
+            document.write(names.toString()+"<br>");
+            names.remove("Raymond");
+            document.write("remove Raymond:<br>");
+            document.write(names.toString()+"<br>");
+            document.write(" Found Barbara: " + names.find("Barbara")+"<br>");
+            document.write(" length = " + names.length()+"<br>");
+            
+    
+           var helloDiv = document.getElementById("helloDiv");
+            
+            //ref_to_div.appendChild()
+            var timestamp = document.getElementById("timestamp");
+            
+            helloDiv.style.backgroundColor = "yellow";
+            //helloDiv.className = "highlight";
+            
+            timestamp.onclick = function() { this.innerHTML = new Date().toString(); }
+            
+        </script>       
+        
+        
+    </body>
+    
+    
+</html>

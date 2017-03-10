@@ -1,0 +1,50 @@
+<dom-module id="hello-component">
+
+    <template>
+        <!-- VIEW -->
+        <div >Greeting Example</div> 
+
+        <div id = "title" >{{greetingValue}}</div> <!-- data bindings in local DOM -->
+        <br><br>
+        <input id="helloInput" is="iron-input" >
+        <br><br>
+        <paper-button raised class="custom green" value="value" on-click="onClickAction">set value</paper-button>    
+    </template> 
+
+
+    <script>
+        // CONTROLLER
+        Polymer({
+            is: "hello-component",
+            // add properties and methods on the element's prototype
+            properties: {
+                // declare properties for the element's public API
+                // MODEL
+                greetingValue: {
+                    type: String,
+                    value: "Hello!"
+                }
+            },
+            onClickAction: function (e) {
+                // read the value of the input data entry
+                var inputTextValue = this.$.helloInput.value;
+                // update MODEL properties value;
+                // note: data bindings in local DOM automatically
+                // updates the 'title' div element
+                this.greetingValue = inputTextValue;
+
+                // update VIEW if not using data-binding as:
+                //this.$.title.innerHTML = inputTextValue;
+            },
+        });
+    </script>  
+
+
+
+
+
+
+
+
+
+</dom-module>
